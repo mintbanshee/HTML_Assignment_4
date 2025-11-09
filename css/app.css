@@ -132,7 +132,6 @@ header {
 #welcome {
   display: grid;
   grid-area: wel;
-  height: auto;
   background: url('../assets/images/home/homeBG.png');
   text-align: center;
   padding-top: 50px;
@@ -141,10 +140,6 @@ header {
   align-items: center;
   border-bottom: 1px solid #fff;
 }
-  #welcome p {
-    font-weight: 500;
-    margin: 10px 100px;
-  }
   #welcome h1 {
     color: var(--callToAct);
     text-shadow: 2px 2px 5px var(--textColor);
@@ -172,18 +167,69 @@ header {
     margin-top: 40px;
   }
 
+#about {
+  display: grid;
+  grid-area: abt;
+  grid-template-areas:
+    "topa topa topa topa" 
+    "lefa lefa rita rita"
+    "lefa lefa rita rita"
+    "lefa lefa rita rita";
+  background: #eacda3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px 100px;
+  border-bottom: 1px solid #fff;
+  column-gap: 40px;
+}
+  #about h1 {
+    color: var(--callToAct);
+    text-shadow: 2px 2px 5px var(--textColor);
+    font-size: 3em;
+  }
+  #about p {
+    margin-top: 0;
+    color: var(--textColor);
+    line-height: 1;
+    font-size: 1em;
+    color: var(--textColor);
+    margin-bottom: 40px;
+  }
+    #topAbout {
+      display: grid;
+      grid-area: topa;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+    #leftAbout {
+      display: grid;
+      grid-area: lefa;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: left;
+    }
+      #bioPic {
+        width: 500px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+      }
+    #rightAbout {
+      display: grid;
+      grid-area: rita;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: right;
+    }
 
   footer {
     display: grid;
     grid-area: ftr;
     height: 200px;
-    background: url(../assets/images/shell/HeaderDarkBG.png);
+    background: url(../assets/images/contact/contactBG.png);
     background-position: center 40%;
     text-align: center;
     padding: 25px;
     color: var(--background);
     font-size: 0.8em;
-    position: relative
+    position: relative;
   }
   #footerLogoBox {
     position: absolute;
