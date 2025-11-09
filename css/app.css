@@ -34,6 +34,12 @@
 p {
   margin: 20px 0;
 }
+h3 {
+  margin-top: 0;
+  font-size: 1.6em;
+  color: var(--detail);
+  margin-bottom: 40px;
+}
 #logo {
   z-index: 7;
   width: 100%;
@@ -190,8 +196,8 @@ header {
   #about p {
     margin-top: 0;
     color: var(--textColor);
-    line-height: 1;
-    font-size: 1em;
+    line-height: 1.2;
+    font-size: 1.2em;
     color: var(--textColor);
     margin-bottom: 40px;
   }
@@ -217,18 +223,168 @@ header {
       grid-area: rita;
       grid-template-columns: repeat(1, 1fr);
       justify-items: right;
+      padding-top: 40px;
+    }
+
+#contact {
+  display: grid;
+  grid-area: cnt;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "topc topc" 
+    "lefc ritc";
+  background: url(../assets/images/contact/contactBG.png);
+  padding: 50px 100px;
+  border-bottom: 1px solid #fff;
+  column-gap: 40px;
+  text-align: center;
+}
+  #contact h1 {
+    color: var(--callToAct);
+    text-shadow: 2px 2px 5px var(--textColor);
+    font-size: 3em;
+  }
+  #contact h3 {
+    text-shadow: 1px 1px 3px var(--background);
+    color: var(--textColor);
+  }
+  #contact p {
+    margin-top: 0;
+    color: var(--textColor);
+    line-height: 1.2;
+    font-size: 1.2em;
+    color: var(--textColor);
+    margin-bottom: 40px;
+  }
+    #topContact {
+      display: grid;
+      grid-area: topc;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+    #leftContact {
+      display: grid;
+      grid-area: lefc;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      border-right: 3px solid var(--callToAct);
+      padding-right: 40px;
+      margin-right: -15px;
+    }
+      #contactIMG {
+        width: 525px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+      }
+    #rightContact {
+      display: grid;
+      grid-area: ritc;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+    #contactForm {
+      text-align: left;
+      width: 100%;
+      max-width: 500px;
+
+    }
+      .formRow {
+        margin-bottom: 20px;
+      }
+      #contactForm label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: var(--textColor);
+      }
+      #contactForm input,
+      #contactForm textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+      }
+      #contactForm button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 30px;
+        border-radius: 999px;
+        border: none;
+        background: var(--callToAct);
+        color: var(--background);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #contactForm button:hover {
+        background: var(--highlight);
+      }
+
+#gallery {
+  display: grid;
+  grid-area: gal;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "topg topg topg"
+    "img img img"
+    "img img img"
+    "img img img";
+  background: #70e1f5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px 100px;
+  border-bottom: 1px solid #fff;
+  column-gap: 40px;
+  text-align: center;
+}
+  #gallery h1 {
+    color: var(--callToAct);
+    text-shadow: 2px 2px 5px var(--textColor);
+    font-size: 3em;
+  }
+  #gallery h3 {
+    text-shadow: 1px 1px 3px var(--background);
+    color: var(--textColor);
+  }
+  #gallery p {
+    margin-top: 0;
+    color: var(--textColor);
+    line-height: 1.2;
+    font-size: 1.2em;
+    color: var(--textColor);
+    margin-bottom: 40px;
+  }
+    #topGallery {
+      display: grid;
+      grid-area: topg;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    #galleryIMGs {
+      display: grid;
+      grid-area: img;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 10px;
+    }
+    .galIMG {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 3px 3px 5px #000;
+      border: 1px solid rgba(255, 255, 255, .67);
+      cursor: pointer;
     }
 
   footer {
     display: grid;
     grid-area: ftr;
-    height: 200px;
-    background: url(../assets/images/contact/contactBG.png);
-    background-position: center 40%;
+    height: 250px;
+    background: url(../assets/images/shell/footerBG.png);
     text-align: center;
     padding: 25px;
-    color: var(--background);
-    font-size: 0.8em;
+
     position: relative;
   }
   #footerLogoBox {
@@ -243,7 +399,10 @@ header {
     footer > p {
       padding: 0;
       margin: 0;
+      color: var(--textColor);
       font-size: 0.8em;
+      font-weight: 500;
+      text-shadow: 1px 1px 5px var(--background);
     }
     footer > p:hover {
       text-decoration: underline;
