@@ -155,12 +155,14 @@ header {
     line-height: 1.5;
     font-weight: 600;
     text-shadow: 2px 2px 5px var(--background);
+    padding: 0 40px;
   }
 #featured {
   margin-top: 35px;
   justify-content: center;
 }
   #featured img {
+
     width: 250px;
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -171,6 +173,10 @@ header {
     color: var(--callToAct);
     text-shadow: 1px 1px 2px var(--textColor);
     margin-top: 40px;
+  }
+  #featured > a {
+    display: inline-block;
+    text-decoration: none;
   }
 
 #about {
@@ -223,7 +229,61 @@ header {
       grid-area: rita;
       grid-template-columns: repeat(1, 1fr);
       justify-items: right;
-      padding-top: 40px;
+
+    }
+
+#gallery {
+  display: grid;
+  grid-area: gal;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "topg topg topg"
+    "img img img"
+    "img img img"
+    "img img img";
+  background: #70e1f5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px 100px;
+  border-bottom: 1px solid #fff;
+  column-gap: 40px;
+  text-align: center;
+}
+  #gallery h1 {
+    color: var(--callToAct);
+    text-shadow: 2px 2px 5px var(--textColor);
+    font-size: 3em;
+  }
+  #gallery h3 {
+    text-shadow: 1px 1px 3px var(--background);
+    color: var(--textColor);
+  }
+  #gallery p {
+    margin-top: 0;
+    color: var(--textColor);
+    line-height: 1.2;
+    font-size: 1.2em;
+    color: var(--textColor);
+    margin-bottom: 40px;
+  }
+    #topGallery {
+      display: grid;
+      grid-area: topg;
+      grid-template-columns: repeat(1 1fr);
+      justify-items: center;
+    }
+    #galleryIMGs {
+      display: grid;
+      grid-area: img;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 10px;
+    }
+    .galIMG {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 3px 3px 5px #000;
+      border: 1px solid rgba(255, 255, 255, .67);
     }
 
 #contact {
@@ -322,60 +382,7 @@ header {
         background: var(--highlight);
       }
 
-#gallery {
-  display: grid;
-  grid-area: gal;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "topg topg topg"
-    "img img img"
-    "img img img"
-    "img img img";
-  background: #70e1f5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 50px 100px;
-  border-bottom: 1px solid #fff;
-  column-gap: 40px;
-  text-align: center;
-}
-  #gallery h1 {
-    color: var(--callToAct);
-    text-shadow: 2px 2px 5px var(--textColor);
-    font-size: 3em;
-  }
-  #gallery h3 {
-    text-shadow: 1px 1px 3px var(--background);
-    color: var(--textColor);
-  }
-  #gallery p {
-    margin-top: 0;
-    color: var(--textColor);
-    line-height: 1.2;
-    font-size: 1.2em;
-    color: var(--textColor);
-    margin-bottom: 40px;
-  }
-    #topGallery {
-      display: grid;
-      grid-area: topg;
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
-    }
-    #galleryIMGs {
-      display: grid;
-      grid-area: img;
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
-      gap: 10px;
-    }
-    .galIMG {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 3px 3px 5px #000;
-      border: 1px solid rgba(255, 255, 255, .67);
-      cursor: pointer;
-    }
+
 
   footer {
     display: grid;
