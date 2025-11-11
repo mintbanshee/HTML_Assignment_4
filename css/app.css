@@ -229,7 +229,6 @@ header {
       grid-area: rita;
       grid-template-columns: repeat(1, 1fr);
       justify-items: right;
-
     }
 
 #gallery {
@@ -430,3 +429,146 @@ header {
     #footerIcon {
       padding: 5px;
     }
+
+@media (max-width: 1295px) {
+  #welcome p {
+    font-size: 0.8em;
+  }
+  #featured {
+  margin-top: 15px;
+  }
+  #about {
+    display: block;
+    text-align: left;
+  }
+    #bioPic {
+      width: 300px;  
+      margin: 0 auto 20px;
+    }
+  #topContact h3 {
+    font-size: 1.2em;
+  }
+  #contactIMG {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #footerIcon {
+    width: 50px;
+  }
+  #welcome h1 {
+    font-size: 1.8em;
+  }
+  #welcome p {
+    font-size: 0.6em;
+  }
+  #about p {
+    font-size: 0.8em;
+  }
+  #topContact h3 {
+    font-size: 1em;
+  }
+  #contactIMG {
+    width: 350px;
+  }
+}
+
+@media (max-width: 990px) {
+  #topAbout {
+    display: block;
+  }
+  #topAbout h3 {
+    font-size: 1.3em;
+  }
+  #contact {
+    display: block;
+  }
+  #leftContact {
+    border-right: none;
+  }
+  #contactIMG {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 940px) {
+  #welcome h1 {
+    font-size: 1.4em;
+  }
+  #welcome p {
+    font-size: 0.4em;
+  }
+  #featured {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 875px) {
+  #topContact h3 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 850px) {
+  #featured img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 840px) {
+  #topAbout h3 {
+    font-size: 1em;
+  } 
+}
+
+@media (max-width: 800px) {
+  #footerIcon {
+    width: 35px;
+  }
+  #footerLogo {
+    width: 125px;
+  }
+  #copy {
+    font-size: 0.6em;
+  }
+  #logo > img {
+    width: 350px;
+  }
+  header {
+    height: 300px;
+  }
+  #socials > img{
+    width: 40px;
+  }
+  #gallery h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 740px) {
+  #topContact h3 {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 730px) {
+  #gallery h1 {
+    font-size: 2em;
+  }
+  #welcome h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 690px) {
+  #topAbout h3 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 615px) {
+  #welcome h1 {
+    font-size: 1em;
+  }
+}
