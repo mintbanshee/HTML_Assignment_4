@@ -559,6 +559,9 @@ header {
   #welcome h1 {
     font-size: 1.2em;
   }
+  #footerLogo {
+    margin-right: 50px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -566,6 +569,13 @@ header {
     font-size: 0.8em;
   }
 }
+
+@media (max-width: 630px) {
+  #footerLogo {
+    margin-right: 80px;
+  }
+}
+
 
 @media (max-width: 615px) {
   #welcome h1 {
